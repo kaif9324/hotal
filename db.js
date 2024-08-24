@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 // const mongoURl ='mongodb://localhost:27017/al_fajr_hotal'
-const mongoURl ='mongodb+srv://akaif595:XAFntEq3L1OfYdSX@cluster0.3tbti.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const mongoURl = process.env.mongoUrl
 mongoose.connect(mongoURl,{
     useNewUrlParser:true,
     useUnifiedTopology:true
