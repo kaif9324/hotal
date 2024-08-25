@@ -4,8 +4,10 @@ const db = require('./db');
 const user_schema = require('./module/RstuData');
 const body_parser = require('body-parser')
 const passport = require('./auth')
+const cores = require('cors');//to access all routes to your site  
 app.use(body_parser.json())    
 require('dotenv').config()
+app.use(cores());
 
 const personRoute = require('./Router/person_router')
 app.use(passport.initialize())
