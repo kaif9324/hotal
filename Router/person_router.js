@@ -22,6 +22,7 @@ router.post('/signup', async (req, resp) => {
         console.log(err)
         resp.status(500).json({ err: 'internel server error' })
     }
+    
 })
 //login route 
 router.post('/login', async (req, resp) => {
